@@ -1,0 +1,9 @@
+<div class="emails-editor">
+   <div class="emails-editor__email" ng-repeat="email in emails track by $index">
+      <span class="emails-editor__emailContent" ng-class="{'emails-editor__invalid': !isValid(email)}">{{email}}</span><div class="emails-editor__remove" ng-click="removeEmail(email)"></div>
+   </div><form class="emails-editor__form" ng-submit="addEmail()">
+      <input class="emails-editor__input" placeholder="add more people..."
+          ng-model="newEmail" ng-blur="addEmail()" ng-keypress="onKeypress($event)"
+          ng-keydown="onKeydown($event)" ng-paste='onPaste($event)'>
+   </form>
+</div>

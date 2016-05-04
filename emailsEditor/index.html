@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+   <meta charset="UTF-8">
+   <title></title>
+   <link href="css/index.css" rel="stylesheet" media="all">
+   <script src="lib/angular.min.js"></script>
+   <script src="js/demo.js"></script>
+
+   <!--begin: комонент emailsEditor-->
+   <script src="js/emailsEditor.js"></script>
+   <link href="css/emailsEditor.css" rel="stylesheet" media="all">
+   <!--end: комонент emailsEditor-->
+</head>
+<body ng-controller="demoController">
+   <div class="demo">
+      <div class="demo__title">Share "Board name" with others</div>
+      <emails-editor emails="emails"></emails-editor>
+      <button ng-click="addRandomEmail()">Add email</button>
+      <button ng-click="getEmailsCount()">Get emails count</button>
+   </div>
+</body>
+</html>

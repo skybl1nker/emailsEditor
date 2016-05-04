@@ -1,0 +1,37 @@
+body {
+   margin: 0;
+}
+
+.demo {
+   padding: 31px 40px 30px 40px;
+   background-color: #f5f5f5;
+}
+
+.demo__title {
+   margin-bottom: 35px;
+   font: normal 20px Arial, Helvetica, sans-serif;
+   line-height: 24px;
+}
+
+.demo .emails-editor {
+   margin-bottom: 60px;
+}
+
+.demo button {
+   width: 100px;
+   height: 30px;
+   margin-right: 16px;
+
+   color: #ffffff;
+   border: none;
+   border-radius: 2px;
+   background-color: #6699ff;
+}
+
+.demo button {
+   width: 100px;
+}
+
+.demo button:last-child {
+   width: 120px;
+}
