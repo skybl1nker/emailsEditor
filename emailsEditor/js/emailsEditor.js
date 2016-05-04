@@ -57,9 +57,9 @@ angular.module('emailsEditor', [])
 
       $scope.onKeypress = function (event) {
          // при вводе запятой или точки вставляем получившиеся email-ы
-         var keyCode = event.keyCode;
-         if (keyCode === 44 || // comma
-            keyCode === 59) // semicolon
+         var code = event.which == null ? event.keyCode : event.which;
+         if (code === 44 // comma
+            || code === 59) // semicolon
          {
             $timeout(function(){
                $scope.addEmail();
@@ -74,7 +74,7 @@ angular.module('emailsEditor', [])
             $scope.removeEmail(emails[emails.length - 1]);
       };
 
-      $scope.onPaste = function (event) {
+      $scope.onPaste = function () {
          // при вставке из буфера вставляем результат, если получился валидный email
          $timeout(function(){
             if (isValid($scope.newEmail))
