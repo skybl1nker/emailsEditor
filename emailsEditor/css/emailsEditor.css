@@ -37,6 +37,10 @@
    color: #b3b3b3;
 }
 
+.emails-editor__input::-ms-clear {
+    display: none;
+}
+
 .emails-editor__remove {
    display: inline-block;
    width: 21px;
